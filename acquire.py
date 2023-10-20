@@ -229,6 +229,7 @@ def prep_titanic(titanic) -> pd.DataFrame:
     ])
     titanic.loc[:,'age'] = titanic.age.fillna(round(titanic.age.mode())).values
     titanic.loc[:, 'embark_town'] = titanic.embark_town.fillna('Southampton')
+
     return titanic
 
 ##-------------------------------------------------------------------##
